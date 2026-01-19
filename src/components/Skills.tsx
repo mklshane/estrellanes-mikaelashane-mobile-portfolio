@@ -1,20 +1,29 @@
 import { View, Text, Dimensions } from "react-native";
 import React from "react";
-import { useTheme } from "../context/ThemeContext";
-import { styles } from "../styles/globalStyles";
+import { useTheme } from "@context/ThemeContext";
+import { styles } from "@styles/globalStyles";
 
 const screenHeight = Dimensions.get("window").height - 450;
 
 const skillsList = [
-  { name: "JavaScript", color: "#FFD6A5" },
-  { name: "React", color: "#C8B9FE" },
-  { name: "React Native", color: "#BEE7E8" },
-  { name: "TypeScript", color: "#FFB7C5" },
-  { name: "UI/UX Design", color: "#C9EFFF" },
-  { name: "Problem Solving", color: "#D0FFC3" },
+  { name: "JavaScript" },
+  { name: "TypeScript" },
+  { name: "Python" },
+  { name: "Java" },
+  { name: "C++" },
+  { name: "React" },
+  { name: "React Native" },
+    { name: "Vue" },
+  { name: "Node.js" },
+  { name: "FastAPI" },
+  { name: "UI/UX Design" },
+  { name: "Git" },
+  { name: "Postman" },
+  { name: "Figma" },
+  { name: "Docker" },
 ];
 
-const Skills = () => {
+const Skills: React.FC = () => {
   const { colors } = useTheme();
 
   return (
@@ -26,26 +35,24 @@ const Skills = () => {
           width: "100%",
           height: screenHeight,
           paddingHorizontal: 25,
-          justifyContent: "center", // center everything vertically
+          justifyContent: "center",
           alignItems: "center",
         },
       ]}
     >
-      {/* Title */}
       <Text
         style={{
-          fontSize: 60,
+          fontSize: 70,
           fontWeight: "bold",
           color: colors.text,
           fontFamily: "PinyonScript",
           textAlign: "center",
-          marginBottom: 30,
+          marginBottom: 0,
         }}
       >
         Skills
       </Text>
 
-      {/* Skills Grid */}
       <View
         style={{
           flexDirection: "row",
@@ -54,36 +61,35 @@ const Skills = () => {
           alignItems: "center",
         }}
       >
-        {skillsList.map((skill, index) => (
-          <View
-            key={index}
-            style={{
-              paddingVertical: 12,
-              paddingHorizontal: 20,
-              backgroundColor: skill.color,
-              borderRadius: 20,
-              borderWidth: 1.5,
-              borderColor: colors.border,
-              shadowColor: colors.shadow,
-              shadowOffset: { width: 2, height: 2 },
-              shadowOpacity: 0.3,
-              shadowRadius: 3,
-              elevation: 4,
-              margin: 8, // spacing between cards
-            }}
-          >
-            <Text
+        {skillsList.map((skill, index) => {
+          const bgColor = colors.tags[index % colors.tags.length];
+
+          return (
+            <View
+              key={index}
               style={{
-                color: colors.text,
-                fontWeight: "600",
-                fontSize: 16,
-                textAlign: "center",
+                paddingVertical: 12,
+                paddingHorizontal: 20,
+                backgroundColor: bgColor,
+                borderRadius: 20,
+                borderWidth: 1.5,
+                borderColor: colors.border,
+                margin: 8,
               }}
             >
-              {skill.name}
-            </Text>
-          </View>
-        ))}
+              <Text
+                style={{
+                  color: colors.text,
+                  fontWeight: "600",
+                  fontSize: 14,
+                  textAlign: "center",
+                }}
+              >
+                {skill.name}
+              </Text>
+            </View>
+          );
+        })}
       </View>
     </View>
   );
