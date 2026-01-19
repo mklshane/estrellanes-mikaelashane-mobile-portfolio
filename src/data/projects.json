@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "title": "Priorix",
+    "description": "A full-stack productivity application that enables users to create flashcards, manage tasks, and track progress.",
+    "tags": ["NextJS", "MongoDB", "TypeScript", "TailwindCSS", "GeminiAPI"],
+    "image": "@assets/priorix.jpg",
+    "github": "https://github.com/mklshane/priorix",
+    "live": "https://priorix.vercel.app/"
+  },
+  {
+    "id": 2,
+    "title": "Tala Makiling",
+    "description": "A fun, interactive stacking game.",
+    "tags": ["React", "Express", "MongoDB", "Node.js", "TailwindCSS"],
+    "image": "@assets/tala.jpg",
+    "github": "https://github.com/dlsl-jpcs/eweek-2025",
+    "live": "https://talamakiling.onrender.com"
+  },
+  {
+    "id": 3,
+    "title": "JPCS Website",
+    "description": "An official website for the Junior Philippine Computer Society (JPCS) DLSL Chapter.",
+    "tags": ["NextJS", "TailwindCSS", "TypeScript", "Vercel"],
+    "image": "@assets/jpcs.jpg",
+    "github": "https://github.com/dlsl-jpcs/jpcs-site",
+    "live": "https://jpcs-dlsl.vercel.app/"
+  },
+  {
+    "id": 4,
+    "title": "Medisys",
+    "description": "A full-stack hospital management system.",
+    "tags": [
+      "React",
+      "JavaScript",
+      "NodeJS",
+      "Express",
+      "MongoDB",
+      "TailwindCSS"
+    ],
+    "image": "@assets/medisys.jpg",
+    "github": "https://github.com/mklshane/final-project-group1-webdevt-frontend",
+    "live": "https://medisys.vercel.app/"
+  }
+]
