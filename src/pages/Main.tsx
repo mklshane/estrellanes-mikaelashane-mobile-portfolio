@@ -6,10 +6,12 @@ import {
   Easing,
 } from "react-native";
 import React, { useRef, useEffect } from "react";
-import Profile from "../components/Profile";
+import Profile from "../components/Profile/Profile";
 import Skills from "../components/Skills";
 import { useTheme } from "../context/ThemeContext";
 import { Ionicons } from "@expo/vector-icons";
+import Projects from "../components/Projects/Projects";
+import Socials from "@components/Social/Socials";
 
 const Main: React.FC = () => {
   const { theme, toggleTheme, colors } = useTheme();
@@ -33,11 +35,12 @@ const Main: React.FC = () => {
   return (
     <View style={{ flex: 1 }}>
       <ScrollView
-        contentContainerStyle={{ paddingBottom: 100 }} 
         showsVerticalScrollIndicator={false}
       >
         <Profile />
         <Skills />
+        <Projects />
+        <Socials />
       </ScrollView>
 
       <Animated.View

@@ -11,7 +11,7 @@ export type ThemeColors = {
 };
 
 export const lightColors: ThemeColors = {
-  background: ["#F7C7DF", "#FEEB85", "#D0FFC3", "#e6f5fc"],
+  background: ["#F7C7DF", "#fef1a7", "#D0FFC3", "#dcd2ff"],
   card: "#FEEB85",
   shadow: "#000000",
   border: "#000000",
