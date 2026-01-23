@@ -2,17 +2,7 @@ import { TouchableOpacity, View, Text, Linking } from "react-native";
 import React from "react";
 import { useTheme } from "@context/ThemeContext";
 import { Feather } from "@expo/vector-icons";
-import { JSX } from "react";
-
-interface SocialCardProps {
-  item: {
-    id: number;
-    name: string;
-    handle: string;
-    url: string;
-    icon: JSX.Element;
-  };
-}
+import type { SocialCardProps } from "../../types";
 
 const SocialCard: React.FC<SocialCardProps> = ({ item }) => {
   const { colors } = useTheme();

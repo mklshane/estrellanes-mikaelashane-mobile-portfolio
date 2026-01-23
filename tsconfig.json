@@ -7,7 +7,8 @@
       "@assets/*": ["assets/*"],
       "@styles/*": ["src/styles/*"],
       "@components/*": ["src/components/*"],
-      "@context/*": ["src/context/*"]
+      "@context/*": ["src/context/*"],
+      "@types/*": ["src/types/*"]
     },
     "ignoreDeprecations": "6.0"
   }

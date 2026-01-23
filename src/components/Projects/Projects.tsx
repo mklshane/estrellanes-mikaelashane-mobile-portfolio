@@ -2,20 +2,11 @@ import { View, Text, Dimensions, FlatList } from "react-native";
 import React, { useState, useEffect } from "react";
 import { useTheme } from "@context/ThemeContext";
 import { styles } from "@styles/globalStyles";
+import type { Project } from "../../types";
 import projectsData from "../../data/projects.json";
 import ProjectCard from "./ProjectCard";
 
 const screenHeight = Dimensions.get("window").height - 200;
-
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  tags: string[];
-  image?: string;
-  github: string;
-  live?: string;
-}
 
 const Projects: React.FC = () => {
   const { colors } = useTheme();

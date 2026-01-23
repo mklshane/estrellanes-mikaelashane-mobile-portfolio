@@ -10,6 +10,7 @@ import React from "react";
 import { useTheme } from "@context/ThemeContext";
 import { Feather } from "@expo/vector-icons";
 import { styles } from "@styles/globalStyles";
+import type { ProjectCardProps } from "../../types";
 
 import priorixImage from "../../../assets/priorix.jpg";
 import talaImage from "../../../assets/tala.jpg";
@@ -22,20 +23,6 @@ const imageMap: { [key: string]: any } = {
   "@assets/jpcs.jpg": jpcsImage,
   "@assets/medisys.jpg": medisysImage,
 };
-
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  tags: string[];
-  image?: string;
-  github: string;
-  live?: string;
-}
-
-interface ProjectCardProps {
-  project: Project;
-}
 
 const { width } = Dimensions.get("window");
 const CARD_WIDTH = width * 0.85;

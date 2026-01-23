@@ -4,13 +4,14 @@ import { useTheme } from "@context/ThemeContext";
 import { styles } from "@styles/globalStyles";
 import { Feather, FontAwesome5 } from "@expo/vector-icons";
 import SocialCard from "./SocialCard";
+import type { SocialLink } from "../../types";
 
 const screenHeight = Dimensions.get("window").height - 200;
 
 const Socials: React.FC = () => {
   const { colors } = useTheme();
 
-  const socialLinks = [
+  const socialLinks: SocialLink[] = [
     {
       id: 1,
       name: "Email",
@@ -41,9 +42,7 @@ const Socials: React.FC = () => {
     },
   ];
 
-  const renderSocialCard = ({ item }: { item: (typeof socialLinks)[0] }) => (
-    <SocialCard item={item} />
-  );
+  const renderSocialCard = ({ item }: { item: SocialLink }) => <SocialCard item={item} />;
 
   return (
     <View

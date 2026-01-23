@@ -1,14 +1,6 @@
-export type ThemeColors = {
-  background: string[];
-  card: string;
-  shadow: string;
-  border: string;
-  text: string;
-  subText: string;
-  accent: string;
-  avatarBg: string;
-  tags: string[];
-};
+import type { ThemeColors } from "../types";
+
+export type { ThemeColors };
 
 export const lightColors: ThemeColors = {
   background: ["#F7C7DF", "#fef1a7", "#D0FFC3", "#dcd2ff"],
