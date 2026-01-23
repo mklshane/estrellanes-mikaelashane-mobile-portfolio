@@ -9,6 +9,7 @@ import {
 import React from "react";
 import { useTheme } from "@context/ThemeContext";
 import { Feather } from "@expo/vector-icons";
+import { styles } from "@styles/globalStyles";
 
 import priorixImage from "../../../assets/priorix.jpg";
 import talaImage from "../../../assets/tala.jpg";
@@ -156,17 +157,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         {project.tags.map((tag, index) => (
           <View
             key={`${project.id}-${tag}-${index}`}
-            style={{
-              backgroundColor: colors.tags[index % colors.tags.length],
-              paddingHorizontal: 12,
-              paddingVertical: 6,
-              borderRadius: 20,
-              borderWidth: 1,
-              borderColor: colors.border,
-            }}
+            style={[
+              styles.projectTagChip,
+              {
+                backgroundColor: colors.tags[index % colors.tags.length],
+                borderColor: colors.border,
+              },
+            ]}
           >
             <Text
-              style={{ fontSize: 12, fontWeight: "600", color: colors.text }}
+              style={[styles.tagText, { color: colors.text }]}
             >
               {tag}
             </Text>
@@ -178,22 +178,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         style={{ flexDirection: "row", justifyContent: "flex-start", gap: 12 }}
       >
         <TouchableOpacity
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            backgroundColor: colors.background[1],
-            paddingHorizontal: 20,
-            paddingVertical: 10,
-            borderRadius: 10,
-            borderWidth: 1,
-            borderColor: colors.border,
-          }}
+          style={[
+            styles.linkButton,
+            {
+              backgroundColor: colors.background[1],
+              borderColor: colors.border,
+            },
+          ]}
           onPress={handlePressGithub}
           activeOpacity={0.7}
         >
           <Feather name="github" size={20} color={colors.text} />
           <Text
-            style={{ marginLeft: 8, color: colors.text, fontWeight: "600" }}
+            style={[
+              styles.linkButtonText,
+              { color: colors.text },
+            ]}
           >
             Code
           </Text>
@@ -201,22 +201,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
         {project.live && (
           <TouchableOpacity
-            style={{
-              flexDirection: "row",
-              alignItems: "center",
-              backgroundColor: colors.background[1],
-              paddingHorizontal: 20,
-              paddingVertical: 10,
-              borderRadius: 10,
-              borderWidth: 1,
-              borderColor: colors.border,
-            }}
+            style={[
+              styles.linkButton,
+              {
+                backgroundColor: colors.background[1],
+                borderColor: colors.border,
+              },
+            ]}
             onPress={handlePressLive}
             activeOpacity={0.7}
           >
             <Feather name="external-link" size={20} color={colors.text} />
             <Text
-              style={{ marginLeft: 8, color: colors.text, fontWeight: "600" }}
+              style={[
+                styles.linkButtonText,
+                { color: colors.text },
+              ]}
             >
               Live Demo
             </Text>

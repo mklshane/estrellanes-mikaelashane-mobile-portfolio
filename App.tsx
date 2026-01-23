@@ -11,7 +11,7 @@ export default function App() {
   });
   
   if (!fontsLoaded) {
-    return null; // or a loading spinner
+    return null; 
   }
 
   return (

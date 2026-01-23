@@ -30,25 +30,21 @@ const Skills: React.FC = () => {
     <View
       style={[
         styles.container,
+        styles.sectionContainer,
         {
           backgroundColor: colors.background[1],
-          width: "100%",
           height: screenHeight,
-          paddingHorizontal: 25,
-          justifyContent: "center",
-          alignItems: "center",
         },
       ]}
     >
       <Text
-        style={{
-          fontSize: 70,
-          fontWeight: "bold",
-          color: colors.text,
-          fontFamily: "PinyonScript",
-          textAlign: "center",
-          marginBottom: 0,
-        }}
+        style={[
+          styles.sectionTitle,
+          {
+            color: colors.text,
+            marginBottom: 0,
+          },
+        ]}
       >
         Skills
       </Text>
@@ -67,23 +63,19 @@ const Skills: React.FC = () => {
           return (
             <View
               key={index}
-              style={{
-                paddingVertical: 12,
-                paddingHorizontal: 20,
-                backgroundColor: bgColor,
-                borderRadius: 20,
-                borderWidth: 1.5,
-                borderColor: colors.border,
-                margin: 8,
-              }}
+              style={[
+                styles.skillsChip,
+                {
+                  backgroundColor: bgColor,
+                  borderColor: colors.border,
+                },
+              ]}
             >
               <Text
-                style={{
-                  color: colors.text,
-                  fontWeight: "600",
-                  fontSize: 14,
-                  textAlign: "center",
-                }}
+                style={[
+                  styles.skillsChipText,
+                  { color: colors.text },
+                ]}
               >
                 {skill.name}
               </Text>

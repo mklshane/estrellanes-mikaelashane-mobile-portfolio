@@ -84,17 +84,19 @@ const ProfileCard: React.FC = () => {
           {tagLabels.map((label, index) => (
             <View
               key={index}
-              style={{
-                paddingHorizontal: 12,
-                paddingVertical: 4,
-                borderRadius: 999,
-                backgroundColor: colors.tags[index],
-                borderWidth: 1.5,
-                borderColor: colors.border,
-              }}
+              style={[
+                styles.profileTagChip,
+                {
+                  backgroundColor: colors.tags[index],
+                  borderColor: colors.border,
+                },
+              ]}
             >
               <Text
-                style={{ fontSize: 12, fontWeight: "600", color: colors.text }}
+                style={[
+                  styles.tagText,
+                  { color: colors.text },
+                ]}
               >
                 {label}
               </Text>

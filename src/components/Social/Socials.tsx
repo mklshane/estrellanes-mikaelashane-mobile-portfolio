@@ -1,6 +1,7 @@
 import { View, Text, Dimensions, FlatList } from "react-native";
 import React from "react";
 import { useTheme } from "@context/ThemeContext";
+import { styles } from "@styles/globalStyles";
 import { Feather, FontAwesome5 } from "@expo/vector-icons";
 import SocialCard from "./SocialCard";
 
@@ -46,27 +47,25 @@ const Socials: React.FC = () => {
 
   return (
     <View
-      style={{
-        backgroundColor: colors.background[0],
-        width: "100%",
-        minHeight: screenHeight,
-        paddingHorizontal: 25,
-        justifyContent: "center",
-        alignItems: "center",
-        paddingBottom: 40,
-      }}
+      style={[
+        styles.sectionContainer,
+        {
+          backgroundColor: colors.background[0],
+          minHeight: screenHeight,
+          paddingBottom: 40,
+        },
+      ]}
     >
       <View style={{ alignItems: "center", marginBottom: 40 }}>
         <Text
-          style={{
-            fontSize: 70,
-            fontWeight: "bold",
-            color: colors.text,
-            fontFamily: "PinyonScript",
-            textAlign: "center",
-            marginBottom: 30,
-            marginTop: 40,
-          }}
+          style={[
+            styles.sectionTitle,
+            {
+              color: colors.text,
+              marginBottom: 30,
+              marginTop: 40,
+            },
+          ]}
         >
           Contact Me
         </Text>

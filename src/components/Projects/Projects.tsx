@@ -1,6 +1,7 @@
 import { View, Text, Dimensions, FlatList } from "react-native";
 import React, { useState, useEffect } from "react";
 import { useTheme } from "@context/ThemeContext";
+import { styles } from "@styles/globalStyles";
 import projectsData from "../../data/projects.json";
 import ProjectCard from "./ProjectCard";
 
@@ -26,25 +27,23 @@ const Projects: React.FC = () => {
 
   return (
     <View
-      style={{
-        backgroundColor: colors.background[3],
-        width: "100%",
-        minHeight: screenHeight,
-        paddingHorizontal: 25,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
+      style={[
+        styles.sectionContainer,
+        {
+          backgroundColor: colors.background[3],
+          minHeight: screenHeight,
+        },
+      ]}
     >
       <Text
-        style={{
-          fontSize: 70,
-          fontWeight: "bold",
-          color: colors.text,
-          fontFamily: "PinyonScript",
-          textAlign: "center",
-          marginBottom: 30,
-          marginTop: 40,
-        }}
+        style={[
+          styles.sectionTitle,
+          {
+            color: colors.text,
+            marginBottom: 30,
+            marginTop: 40,
+          },
+        ]}
       >
         Projects
       </Text>
